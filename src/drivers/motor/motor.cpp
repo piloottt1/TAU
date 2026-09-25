@@ -12,9 +12,9 @@ namespace drivers::motor
 
     void MotorDriver::set_voltage(float u)
     {
-        digitalWrite(dir_pin, u > 0);
+        digitalWrite(dir_pin, (u > 0) ^ polarity);
 
-        int pwm = abs(u) / 9.0 * 255;
+        uint8_t pwm = constrain(abs(u) / get_voltage() * 255, 0, 255);
 
         analogWrite(pwm_pin, pwm);
     }

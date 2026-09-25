@@ -1,6 +1,7 @@
 #pragma once
 
 #include "motor/motor.hpp"
+#include "battery_volts/battery_volts.hpp"
 
 namespace drivers
 {
