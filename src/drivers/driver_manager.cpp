@@ -34,5 +34,7 @@ namespace drivers
     {
         motor_left.init();
         motor_right.init();
+
+        battery_volts_driver.init();
     }
 };

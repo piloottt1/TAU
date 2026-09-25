@@ -5,7 +5,7 @@
 
 namespace drivers
 {
-
+    extern battery_volts::BatteryVoltsDriver battery_volts_driver;
     extern motor::MotorDriver motor_left, motor_right;
 
     void init();
