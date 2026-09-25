@@ -1,6 +1,6 @@
-#include <Arduino.h>
-
 #include "drivers/driver_manager.hpp"
+
+#include <Arduino.h>
 
 void setup()
 {
