@@ -1,18 +1,14 @@
 #include <Arduino.h>
 
-#include "drivers/motor/motor.hpp"
-#include "drivers/encoder/encoder.hpp"
+#include "drivers/driver_manager.hpp"
 
 void setup()
 {
-  drivers::motor::init();
-  drivers::encoder::init();
-
-  drivers::motor::set_voltage(0.5);
+  drivers::init();
 }
 
 void loop()
 {
-  float angle = drivers::encoder::get_angle();
-  Serial.println(angle);
+  drivers::motor_left.set_voltage(1);
+  drivers::motor_right.set_voltage(1);
 }
