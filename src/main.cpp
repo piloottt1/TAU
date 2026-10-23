@@ -11,9 +11,13 @@ void setup()
 
 void loop()
 {
-  drivers::motor_left.set_voltage(1);
-  drivers::motor_right.set_voltage(1);
-
-  Serial.println(drivers::battery_volts_driver.get_volts());
-  delay(1000);
+  //drivers::motor_left.set_voltage(1);
+  //drivers::motor_right.set_voltage(1);
+  drivers::encoder_left.tick();
+  drivers::encoder_right.tick();
+  Serial.println("left");
+  Serial.println(drivers::encoder_left.phi_rad);
+  Serial.println("right");
+  Serial.println(drivers::encoder_right.phi_rad);
+  delay(100);
 }
