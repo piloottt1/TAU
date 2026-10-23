@@ -34,17 +34,17 @@ namespace drivers
     motor::MotorDriver motor_right(motor_right_params);
 
     encoder::EncoderParams encoder_left_params = {
-        .tick_to_rad = 1.0,
+        .tick_to_rad = 2.0 * 10.0 * M_PI / 14300,
         .pin_clk_a = 2,
         .pin_b = 4,
-        .polarity = 1
+        .polarity = -1
     };
 
     encoder::EncoderParams encoder_right_params = {
-        .tick_to_rad = 1.0,
+        .tick_to_rad = 2.0 * 10.0 * M_PI / 14300,
         .pin_clk_a = 3,
         .pin_b = 5,
-        .polarity = -1
+        .polarity = 1
     };
 
     encoder::EncoderDriver encoder_left(encoder_left_params);
