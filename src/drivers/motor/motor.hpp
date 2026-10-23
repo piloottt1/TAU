@@ -12,7 +12,7 @@ namespace drivers::motor
         float(*get_voltage)();
     };
 
-    class MotorDriver : public MotorParams {
+    class MotorDriver : private MotorParams {
     public:
         MotorDriver(MotorParams &params) : MotorParams(params) {};
         void init();

@@ -10,7 +10,7 @@ namespace drivers::battery_volts
         uint8_t pin; 
     };
     
-    class BatteryVoltsDriver : public BatteryVoltsParams
+    class BatteryVoltsDriver : private BatteryVoltsParams
     {
     public:
         BatteryVoltsDriver(BatteryVoltsParams &params) : BatteryVoltsParams(params) {};
