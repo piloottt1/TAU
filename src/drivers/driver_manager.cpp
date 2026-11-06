@@ -19,7 +19,7 @@ namespace drivers
     motor::MotorParams motor_left_params = {
         .dir_pin = 7,
         .pwm_pin = 9,
-        .polarity = 0,
+        .polarity = -1,
         .get_voltage = get_voltage
     };
     
